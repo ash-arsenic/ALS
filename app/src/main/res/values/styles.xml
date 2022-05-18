@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="fragment_heading">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="password_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="button_style">
+        <item name="cornerRadius">15dp</item>
+        <item name="android:paddingVertical">10dp</item>
+        <item name="android:paddingHorizontal">20dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

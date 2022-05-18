@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_password"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_lock_24"
+        android:title="Password"/>
+    <item
+        android:id="@+id/home_camera"
+        android:enabled="true"
+        android:icon="@drawable/ic_camera"
+        android:title="Camera"/>
+    <item
+        android:id="@+id/home_location"
+        android:enabled="true"
+        android:icon="@drawable/ic_location"
+        android:title="Location"/>
+    <item
+        android:id="@+id/home_history"
+        android:enabled="true"
+        android:icon="@drawable/ic_history"
+        android:title="History"/>
+</menu>
