@@ -27,15 +27,20 @@ public class PasswordFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_password, container, false);
 
         digit1 = view.findViewById(R.id.digit_one);
+        digit1.setText(Constants.firebase_otp.substring(0, 1));
         digit2 = view.findViewById(R.id.digit_two);
+        digit2.setText(Constants.firebase_otp.substring(1, 2));
         digit3 = view.findViewById(R.id.digit_three);
+        digit3.setText(Constants.firebase_otp.substring(2, 3));
         digit4 = view.findViewById(R.id.digit_four);
+        digit4.setText(Constants.firebase_otp.substring(3, 4));
 
         generatePassword = view.findViewById(R.id.generate_password_btn);
         generatePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 otp = setOtp();
+                Constants.firebase_otp = String.valueOf(otp);
                 saveOtp(otp);
             }
         });

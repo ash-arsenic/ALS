@@ -46,4 +46,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/get_image_progress"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center"
+        android:background="@drawable/progress_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            app:indicatorColor="@color/white"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
