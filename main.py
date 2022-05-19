@@ -1,6 +1,6 @@
 import json
 
-from flask import Flask, request, render_template
+from flask import Flask, request
 import cv2 as cv
 from time import time_ns
 import firebase_admin as fb
@@ -15,6 +15,7 @@ fb.initialize_app(cred, {
     })
 bucket = storage.bucket()
 ref = db.reference("/users/password")
+image_ref = db.reference("/users/image")
 
 # Flask Constructor
 app = Flask(__name__)
@@ -60,8 +61,10 @@ def debug():
 
         print("Photo Uploaded")
         blob.make_public()
-        print(blob.public_url)
-        return blob.public_url
+        public_url = blob.public_url
+        image_ref.set(public_url)
+        print(public_url)
+        return public_url
     else:
         return "https://www.elegantthemes.com/blog/wp-content/uploads/2020/08/000-http-error-codes.png"
 
